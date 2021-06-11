@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         writeToFile(text.getText().toString(), this.getApplicationContext());
     }
 
+
+    //Writes to a file in the downloads directory
     private void writeToFile(String data,Context context)
     {
         try {
