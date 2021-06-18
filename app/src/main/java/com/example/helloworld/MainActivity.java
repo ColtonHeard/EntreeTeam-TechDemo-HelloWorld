@@ -43,6 +43,22 @@ public class MainActivity extends AppCompatActivity {
         writeToFile(text.getText().toString(), this.getApplicationContext());
     }
 
+    int counter = 0;
+    public void Reverse(View view) {
+        TextView text = (TextView) findViewById(R.id.tview);
+
+        while (text.getText().length() != 0)
+        {
+            text.setText(text.getText().subSequence(0, text.length() - 1));
+        }
+        counter++;
+        if (counter % 2 == 0)
+        {
+            text.setText(text.getText() + "Hello World!");
+        } else {
+            text.setText(text.getText() + "dlroW olleH!");
+        }
+    }
 
     //Writes to a file in the downloads directory
     private void writeToFile(String data,Context context)
