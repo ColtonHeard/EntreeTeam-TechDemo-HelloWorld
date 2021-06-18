@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
     public void removeExclam(View view) {
         TextView text = (TextView) findViewById(R.id.tview);
 
-        if (text.getText().length() > 11)
+        String helloText = "Hello Teal and Black World";
+
+        if (text.getText().length() > helloText.length())
         {
             text.setText(text.getText().subSequence(0, text.length() - 1));
         }
